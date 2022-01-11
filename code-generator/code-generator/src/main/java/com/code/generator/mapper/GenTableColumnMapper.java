@@ -45,6 +45,14 @@ public interface GenTableColumnMapper
     public int updateGenTableColumn(GenTableColumn genTableColumn);
 
     /**
+     * 修改业务字段
+     *
+     * @param genTableColumn 业务字段信息
+     * @return 结果
+     */
+    public int updateGenTableColumnByName(GenTableColumn genTableColumn);
+
+    /**
      * 删除业务字段
      * 
      * @param genTableColumns 列数据

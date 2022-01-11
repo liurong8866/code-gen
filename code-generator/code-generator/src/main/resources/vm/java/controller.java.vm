@@ -1,4 +1,4 @@
-package ${packageName}.controller;
+package cn.com.bbmg.bidmall.controller.${moduleName};
 
 import cn.com.bbmg.bidmall.common.enums.ResultCode;
 import cn.com.bbmg.bidmall.common.exception.ServiceException;

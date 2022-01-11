@@ -110,6 +110,27 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         where column_id = #{columnId}
     </update>
 
+    <update id="updateGenTableColumnByName" parameterType="GenTableColumn">
+        update gen_table_column
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="columnComment != null">column_comment = #{columnComment},</if>
+            <if test="columnType != null">java_type = #{javaType},</if>
+            <if test="javaField != null">java_field = #{javaField},</if>
+            <if test="isInsert != null">is_insert = #{isInsert},</if>
+            <if test="isEdit != null">is_edit = #{isEdit},</if>
+            <if test="isList != null">is_list = #{isList},</if>
+            <if test="isQuery != null">is_query = #{isQuery},</if>
+            <if test="isRequired != null">is_required = #{isRequired},</if>
+            <if test="queryType != null">query_type = #{queryType},</if>
+            <if test="htmlType != null">html_type = #{htmlType},</if>
+            <if test="dictType != null">dict_type = #{dictType},</if>
+            <if test="sort != null">sort = #{sort},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            update_time = sysdate()
+        </trim>
+        where column_name = #{columnName}
+    </update>
+
     <delete id="deleteGenTableColumnByIds" parameterType="Long">
         delete from gen_table_column where table_id in 
         <foreach collection="array" item="tableId" open="(" separator="," close=")">

@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2b6358a-e69a-4bba-9e52-40fa4219b581" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/js/api-buyer.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/js/api-manager.js.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/util/VelocityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/util/VelocityUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/mapper/GenTableColumnMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/mapper/GenTableColumnMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/service/GenTableServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/service/GenTableServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/generator.yml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/generator.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/mapper/GenTableColumnMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/mapper/GenTableColumnMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/controller.java.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/domain.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/domain.java.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/util/VelocityUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/util/VelocityUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/controller.java.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/domain.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/domain.java.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/mapper/GenTableColumnMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/mapper/GenTableColumnMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/service/GenTableServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/service/GenTableServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +92,9 @@
       <workItem from="1641781887790" duration="2305000" />
       <workItem from="1641786466102" duration="17097000" />
       <workItem from="1641862661778" duration="180000" />
-      <workItem from="1641862896441" duration="7898000" />
+      <workItem from="1641862896441" duration="8811000" />
+      <workItem from="1641878203226" duration="594000" />
+      <workItem from="1641892920890" duration="5221000" />
     </task>
     <servers />
   </component>
@@ -114,5 +112,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/util/GenUtils.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

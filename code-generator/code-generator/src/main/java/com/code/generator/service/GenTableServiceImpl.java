@@ -296,13 +296,29 @@ public class GenTableServiceImpl implements IGenTableService
         }
         List<String> dbTableColumnNames = dbTableColumns.stream().map(GenTableColumn::getColumnName).collect(Collectors.toList());
 
-        dbTableColumns.forEach(column -> {
+        int i = 1;
+
+        for (GenTableColumn column : dbTableColumns){
             if (!tableColumnNames.contains(column.getColumnName()))
             {
                 GenUtils.initColumnField(column, table);
                 genTableColumnMapper.insertGenTableColumn(column);
             }
-        });
+
+            //更新排序
+            GenTableColumn genTableColumn = new GenTableColumn();
+            genTableColumn.setColumnName(column.getColumnName());
+            genTableColumn.setSort(i);
+            genTableColumnMapper.updateGenTableColumnByName(genTableColumn);
+            i++;
+        }
+//        dbTableColumns.forEach(column -> {
+//            if (!tableColumnNames.contains(column.getColumnName()))
+//            {
+//                GenUtils.initColumnField(column, table);
+//                genTableColumnMapper.insertGenTableColumn(column);
+//            }
+//        });
 
         List<GenTableColumn> delColumns = tableColumns.stream().filter(column -> !dbTableColumnNames.contains(column.getColumnName())).collect(Collectors.toList());
         if (StringUtils.isNotEmpty(delColumns))

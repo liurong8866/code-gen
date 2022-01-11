@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
     <groupId>com.code</groupId>
-    <artifactId>code</artifactId>
+    <artifactId>codegen</artifactId>
     <version>1.0.0</version>
 
     <name>code</name>

@@ -133,22 +133,24 @@ public class VelocityUtils
         templates.add("vm/java/service.java.vm");
         templates.add("vm/java/serviceImpl.java.vm");
         templates.add("vm/java/controller.java.vm");
-        templates.add("vm/xml/mapper.xml.vm");
-        templates.add("vm/sql/sql.vm");
-        templates.add("vm/js/api.js.vm");
-        if (GenConstants.TPL_CRUD.equals(tplCategory))
-        {
-            templates.add("vm/vue/index.vue.vm");
-        }
-        else if (GenConstants.TPL_TREE.equals(tplCategory))
-        {
-            templates.add("vm/vue/index-tree.vue.vm");
-        }
-        else if (GenConstants.TPL_SUB.equals(tplCategory))
-        {
-            templates.add("vm/vue/index.vue.vm");
-            templates.add("vm/java/sub-domain.java.vm");
-        }
+        templates.add("vm/js/api-buyer.js.vm");
+        templates.add("vm/js/api-manager.js.vm");
+//        templates.add("vm/xml/mapper.xml.vm");
+//        templates.add("vm/sql/sql.vm");
+//        templates.add("vm/js/api.js.vm");
+//        if (GenConstants.TPL_CRUD.equals(tplCategory))
+//        {
+//            templates.add("vm/vue/index.vue.vm");
+//        }
+//        else if (GenConstants.TPL_TREE.equals(tplCategory))
+//        {
+//            templates.add("vm/vue/index-tree.vue.vm");
+//        }
+//        else if (GenConstants.TPL_SUB.equals(tplCategory))
+//        {
+//            templates.add("vm/vue/index.vue.vm");
+//            templates.add("vm/java/sub-domain.java.vm");
+//        }
         return templates;
     }
 
@@ -172,18 +174,13 @@ public class VelocityUtils
         String mybatisPath = MYBATIS_PATH + "/" + moduleName;
         String vuePath = "vue";
 
-        if (template.contains("dos.java.vm"))
-        {
-            fileName = StringUtils.format("{}/entity/dos/{}.java", javaPath, className);
-        }
-
         if (template.contains("domain.java.vm"))
         {
-            fileName = StringUtils.format("{}/domain/{}.java", javaPath, className);
+            fileName = StringUtils.format("{}/entity/{}.java", javaPath, className);
         }
         if (template.contains("sub-domain.java.vm") && StringUtils.equals(GenConstants.TPL_SUB, genTable.getTplCategory()))
         {
-            fileName = StringUtils.format("{}/domain/{}.java", javaPath, genTable.getSubTable().getClassName());
+            fileName = StringUtils.format("{}/entity/{}.java", javaPath, genTable.getSubTable().getClassName());
         }
         else if (template.contains("mapper.java.vm"))
         {
@@ -191,11 +188,11 @@ public class VelocityUtils
         }
         else if (template.contains("service.java.vm"))
         {
-            fileName = StringUtils.format("{}/service/I{}Service.java", javaPath, className);
+            fileName = StringUtils.format("{}/service/{}Service.java", javaPath, className);
         }
         else if (template.contains("serviceImpl.java.vm"))
         {
-            fileName = StringUtils.format("{}/service/impl/{}ServiceImpl.java", javaPath, className);
+            fileName = StringUtils.format("{}/serviceimpl/{}ServiceImpl.java", javaPath, className);
         }
         else if (template.contains("controller.java.vm"))
         {
@@ -212,6 +209,14 @@ public class VelocityUtils
         else if (template.contains("api.js.vm"))
         {
             fileName = StringUtils.format("{}/api/{}/{}.js", vuePath, moduleName, businessName);
+        }
+        else if (template.contains("api-buyer.js.vm"))
+        {
+            fileName = StringUtils.format("{}/api-buyer/{}/{}.js", vuePath, moduleName, businessName);
+        }
+        else if (template.contains("api-manager.js.vm"))
+        {
+            fileName = StringUtils.format("{}/api-manager/{}/{}.js", vuePath, moduleName, businessName);
         }
         else if (template.contains("index.vue.vm"))
         {

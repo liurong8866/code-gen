@@ -33,6 +33,13 @@ public class ${ClassName}Controller extends BaseController {
 
     private final ${ClassName}Service ${className}Service;
 
+    @GetMapping
+    @ApiOperation(value = "分页获取${functionName}")
+    public ResultMessage<IPage<${ClassName}>> getByPage(${ClassName} entity, SearchVO searchVo, PageVO page){
+        IPage<${ClassName}> data = ${className}Service.page(PageUtil.initPage(page),PageUtil.initWrapper(entity, searchVo));
+        return new ResultUtil<IPage<${ClassName}>>().setData(data);
+    }
+
     @GetMapping(value = "/{id}")
     @ApiOperation(value = "查看${functionName}详情")
     public ResultMessage<${ClassName}> get(@PathVariable String id){
@@ -41,16 +48,9 @@ public class ${ClassName}Controller extends BaseController {
         return new ResultUtil<${ClassName}>().setData(${className});
     }
 
-    @GetMapping
-    @ApiOperation(value = "分页获取${functionName}")
-    public ResultMessage<IPage<${ClassName}>> getByPage(${ClassName} entity, SearchVO searchVo, PageVO page){
-        IPage<${ClassName}> data = ${className}Service.page(PageUtil.initPage(page),PageUtil.initWrapper(entity, searchVo));
-        return new ResultUtil<IPage<${ClassName}>>().setData(data);
-    }
-
     @PostMapping
     @ApiOperation(value = "新增${functionName}")
-    public ResultMessage<${ClassName}> save(${ClassName} ${className}){
+    public ResultMessage<${ClassName}> add(${ClassName} ${className}){
 
         if(${className}Service.save(${className})){
             return new ResultUtil<${ClassName}>().setData(${className});
@@ -69,7 +69,7 @@ public class ${ClassName}Controller extends BaseController {
 
     @DeleteMapping(value = "/{ids}")
     @ApiOperation(value = "删除${functionName}")
-    public ResultMessage<Object> delAllByIds(@PathVariable List ids){
+    public ResultMessage<Object> delete(@PathVariable List ids){
         ${className}Service.removeByIds(ids);
         return ResultUtil.success("成功删除");
     }

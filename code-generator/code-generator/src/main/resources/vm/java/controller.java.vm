@@ -4,10 +4,9 @@ import cn.com.bbmg.bidmall.common.enums.ResultCode;
 import cn.com.bbmg.bidmall.common.exception.ServiceException;
 import cn.com.bbmg.bidmall.common.enums.ResultUtil;
 import cn.com.bbmg.bidmall.common.vo.ResultMessage;
-import cn.com.bbmg.bidmall.common.vo.PageVO;
-import cn.com.bbmg.bidmall.common.vo.SearchVO;
-import ${packageName}.${ClassName};
-import ${packageName}.service.${className}Service;
+import ${packageName}.entity.dos.${ClassName};
+import ${packageName}.entity.dto.${ClassName}SearchParams;
+import ${packageName}.service.${ClassName}Service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import lombok.RequiredArgsConstructor;
 import io.swagger.annotations.Api;
@@ -15,7 +14,6 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -29,21 +27,20 @@ import java.util.List;
 @RestController
 @Api(tags = "${functionName}接口")
 @RequestMapping("/${moduleName}/${businessName}" )
-public class ${ClassName}Controller extends BaseController {
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
+public class ${ClassName}Controller {
 
     private final ${ClassName}Service ${className}Service;
 
     @GetMapping
     @ApiOperation(value = "分页获取${functionName}")
-    public ResultMessage<IPage<${ClassName}>> getByPage(${ClassName} entity, SearchVO searchVo, PageVO page){
-        IPage<${ClassName}> data = ${className}Service.page(PageUtil.initPage(page),PageUtil.initWrapper(entity, searchVo));
-        return new ResultUtil<IPage<${ClassName}>>().setData(data);
+    public ResultMessage<IPage<${ClassName}>> getByPage(${ClassName}SearchParams param) {
+        return ResultUtil.data(${className}Service.get${ClassName}ByPage(param));
     }
 
     @GetMapping(value = "/{id}")
     @ApiOperation(value = "查看${functionName}详情")
     public ResultMessage<${ClassName}> get(@PathVariable String id){
-
         ${ClassName} ${className} = ${className}Service.getById(id);
         return new ResultUtil<${ClassName}>().setData(${className});
     }
@@ -51,11 +48,10 @@ public class ${ClassName}Controller extends BaseController {
     @PostMapping
     @ApiOperation(value = "新增${functionName}")
     public ResultMessage<${ClassName}> add(${ClassName} ${className}){
-
         if(${className}Service.save(${className})){
             return new ResultUtil<${ClassName}>().setData(${className});
         }
-        return new ResultUtil<${ClassName}>().setErrorMsg("未知异常，请稍后重试");
+        throw new ServiceException(ResultCode.BRAND_SAVE_ERROR);
     }
 
     @PutMapping("/{id}")
@@ -64,13 +60,13 @@ public class ${ClassName}Controller extends BaseController {
         if(${className}Service.updateById(${className})){
             return new ResultUtil<${ClassName}>().setData(${className});
         }
-        return new ResultUtil<${ClassName}>().setErrorMsg("未知异常，请稍后重试");
+        throw new ServiceException(ResultCode.BRAND_UPDATE_ERROR);
     }
 
     @DeleteMapping(value = "/{ids}")
     @ApiOperation(value = "删除${functionName}")
     public ResultMessage<Object> delete(@PathVariable List ids){
         ${className}Service.removeByIds(ids);
-        return ResultUtil.success("成功删除");
+        return ResultUtil.success(ResultCode.SUCCESS);
     }
 }

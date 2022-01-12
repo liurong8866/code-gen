@@ -25,10 +25,10 @@ import java.util.List;
  */
 
 @RestController
-@Api(tags = "${functionName}接口")
-@RequestMapping("/${moduleName}/${businessName}" )
+@Api(tags = "店铺端,${functionName}接口")
+@RequestMapping("/store/${moduleName}/${businessName}" )
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-public class ${ClassName}Controller {
+public class ${ClassName}StoreController {
 
     private final ${ClassName}Service ${className}Service;
 

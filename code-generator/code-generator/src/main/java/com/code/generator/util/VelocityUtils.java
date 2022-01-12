@@ -129,10 +129,13 @@ public class VelocityUtils
     {
         List<String> templates = new ArrayList<String>();
         templates.add("vm/java/domain.java.vm" );
+        templates.add("vm/java/domainsearch.java.vm" );
         templates.add("vm/java/mapper.java.vm");
         templates.add("vm/java/service.java.vm");
         templates.add("vm/java/serviceImpl.java.vm");
-        templates.add("vm/java/controller.java.vm");
+//        templates.add("vm/java/controller.java.vm");
+        templates.add("vm/java/controller-buyer.java.vm");
+        templates.add("vm/java/controller-store.java.vm");
         templates.add("vm/js/api-buyer.js.vm");
         templates.add("vm/js/api-manager.js.vm");
 //        templates.add("vm/xml/mapper.xml.vm");
@@ -171,14 +174,19 @@ public class VelocityUtils
         String businessName = genTable.getBusinessName();
 
         String javaPath = PROJECT_PATH + "/" + StringUtils.replace(packageName, ".", "/");
+//        javaPath = "/java";
         String mybatisPath = MYBATIS_PATH + "/" + moduleName;
         String vuePath = "vue";
 
         if (template.contains("domain.java.vm"))
         {
-            fileName = StringUtils.format("{}/entity/{}.java", javaPath, className);
+            fileName = StringUtils.format("{}/entity/dos/{}.java", javaPath, className);
         }
-        if (template.contains("sub-domain.java.vm") && StringUtils.equals(GenConstants.TPL_SUB, genTable.getTplCategory()))
+        else if (template.contains("domainsearch.java.vm"))
+        {
+            fileName = StringUtils.format("{}/entity/dto/{}.java", javaPath, className+"SearchParams");
+        }
+        else if (template.contains("sub-domain.java.vm") && StringUtils.equals(GenConstants.TPL_SUB, genTable.getTplCategory()))
         {
             fileName = StringUtils.format("{}/entity/{}.java", javaPath, genTable.getSubTable().getClassName());
         }
@@ -196,7 +204,15 @@ public class VelocityUtils
         }
         else if (template.contains("controller.java.vm"))
         {
-            fileName = StringUtils.format("{}/controller/{}Controller.java", javaPath, className);
+            fileName = StringUtils.format("{}/controller/{}/{}Controller.java", javaPath, moduleName, className);
+        }
+        else if (template.contains("controller-buyer.java.vm"))
+        {
+            fileName = StringUtils.format("{}/controller-buyer/{}/{}BuyerController.java", javaPath, moduleName, className);
+        }
+        else if (template.contains("controller-store.java.vm"))
+        {
+            fileName = StringUtils.format("{}/controller-store/{}/{}StoreController.java", javaPath, moduleName, className);
         }
         else if (template.contains("mapper.xml.vm"))
         {
@@ -263,6 +279,7 @@ public class VelocityUtils
             {
                 importList.add("java.util.Date");
                 importList.add("com.fasterxml.jackson.annotation.JsonFormat");
+                importList.add("org.springframework.format.annotation.DateTimeFormat");
             }
             else if (!column.isSuperColumn() && GenConstants.TYPE_BIGDECIMAL.equals(column.getJavaType()))
             {

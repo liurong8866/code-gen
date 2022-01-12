@@ -5,8 +5,6 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 #foreach ($import in $importList)
 import ${import};
 #end
@@ -20,7 +18,7 @@ import ${import};
 
 @Data
 @TableName("${tableName}")
-@ApiModel(value = "${functionName}")
+@ApiModel(value = "${functionName}(${ClassName}))")
 public class ${ClassName} extends BaseEntity
 {
     private static final long serialVersionUID = 1L;

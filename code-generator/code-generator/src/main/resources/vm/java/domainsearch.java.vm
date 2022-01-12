@@ -1,26 +1,24 @@
-package ${packageName}.entity.dos;
+package ${packageName}.entity.dto;
 
-import cn.com.bbmg.bidmall.mybatis.BaseEntity;
-import com.baomidou.mybatisplus.annotation.TableName;
-import io.swagger.annotations.ApiModelProperty;
+import cn.com.bbmg.bidmall.common.vo.PageVO;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 #foreach ($import in $importList)
 import ${import};
 #end
 
 /**
- * ${functionName}对象 ${tableName}
+ * ${functionName}查询条件
  *
  * @author ${author}
  * @date ${datetime}
  */
-
 @Data
-@TableName("${tableName}")
-@ApiModel(value = "${functionName}(${ClassName}))")
-public class ${ClassName} extends BaseEntity
-{
+@ApiModel(value = "${functionName}查询参数(${ClassName}SearchParams)")
+public class ${ClassName}SearchParams extends PageVO {
     private static final long serialVersionUID = 1L;
 
 #foreach ($column in $columns)
@@ -30,12 +28,7 @@ public class ${ClassName} extends BaseEntity
     #else
         #set($comment=$column.columnComment)
     #end
-    #if($column.javaField != "id"
-        && $column.javaField != "createBy"
-        && $column.javaField != "createTime"
-        && $column.javaField != "updateBy"
-        && $column.javaField != "updateTime"
-        && $column.javaField != "deleteFlag")
+    #if($column.isQuery == 1)
     @ApiModelProperty(value = "$comment")
     #if($column.javaType == 'Date')
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")

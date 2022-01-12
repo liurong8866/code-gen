@@ -1,11 +1,7 @@
 package com.code.common.utils;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+
 import org.springframework.util.AntPathMatcher;
 import com.code.common.constant.Constants;
 import com.code.common.core.text.StrFormatter;
@@ -459,32 +455,45 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils
      */
     public static String toCamelCase(String s)
     {
-        if (s == null)
-        {
+        if (s == null){
             return null;
         }
-        s = s.toLowerCase();
-        StringBuilder sb = new StringBuilder(s.length());
-        boolean upperCase = false;
-        for (int i = 0; i < s.length(); i++)
-        {
-            char c = s.charAt(i);
+        s = s.replace("-","_");
 
-            if (c == SEPARATOR)
-            {
-                upperCase = true;
-            }
-            else if (upperCase)
-            {
-                sb.append(Character.toUpperCase(c));
-                upperCase = false;
-            }
-            else
-            {
-                sb.append(c);
-            }
+        if(s.indexOf("_")<0){
+            return s.substring(0,1).toLowerCase(Locale.ROOT) + s.substring(1);
         }
-        return sb.toString();
+        else{
+            String[] words = s.split("_");
+            String result ="";
+            for(String word : words ){
+                result += word.substring(0,1).toUpperCase(Locale.ROOT) + word.substring(1);
+            }
+            return result.substring(0,1).toLowerCase(Locale.ROOT) + result.substring(1);
+        }
+
+//        s = s.toLowerCase();
+//        StringBuilder sb = new StringBuilder(s.length());
+//        boolean upperCase = false;
+//        for (int i = 0; i < s.length(); i++)
+//        {
+//            char c = s.charAt(i);
+//
+//            if (c == SEPARATOR)
+//            {
+//                upperCase = true;
+//            }
+//            else if (upperCase)
+//            {
+//                sb.append(Character.toUpperCase(c));
+//                upperCase = false;
+//            }
+//            else
+//            {
+//                sb.append(c);
+//            }
+//        }
+//        return sb.toString();
     }
 
     /**

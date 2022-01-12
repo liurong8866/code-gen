@@ -5,13 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2b6358a-e69a-4bba-9e52-40fa4219b581" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/mapper/GenTableColumnMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/mapper/GenTableColumnMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/service/GenTableServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/service/GenTableServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/controller-buyer.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/controller-store.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/domainsearch.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-generator-ui/src/views/code/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../code-generator-ui/src/views/code/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-common/src/main/java/com/code/common/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/code-common/src/main/java/com/code/common/utils/StringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-common/target/classes/com/code/common/utils/StringUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/code-common/target/classes/com/code/common/utils/StringUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/util/VelocityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/util/VelocityUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/generator.yml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/generator.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/mapper/GenTableColumnMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/mapper/GenTableColumnMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/controller.java.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/mapper/GenTableColumnMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/mapper/GenTableColumnMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/service/GenTableServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/service/GenTableServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/domain.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/domain.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/service.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/service.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/serviceImpl.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/serviceImpl.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/util/VelocityUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/util/VelocityUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/generator.yml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/generator.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/controller.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/domain.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/domain.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/service.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/service.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/serviceImpl.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/serviceImpl.java.vm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +31,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -43,7 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/code-generator/src/main/resources/vm/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/code-generator/src/main/resources/vm/java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.6770115" />
@@ -54,6 +73,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/code-generator/src/main/resources/vm/java" />
       <recent name="$PROJECT_DIR$/code-generator/src/main/resources/vm/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -94,7 +114,7 @@
       <workItem from="1641862661778" duration="180000" />
       <workItem from="1641862896441" duration="8811000" />
       <workItem from="1641878203226" duration="594000" />
-      <workItem from="1641892920890" duration="5221000" />
+      <workItem from="1641892920890" duration="25252000" />
     </task>
     <servers />
   </component>
@@ -112,16 +132,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/util/GenUtils.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

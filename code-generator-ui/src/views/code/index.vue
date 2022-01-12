@@ -112,7 +112,7 @@
       <el-table-column
         type="selection"
         align="center"
-        width="55"
+        width="30"
       ></el-table-column>
       <el-table-column label="序号" type="index" width="50" align="center">
         <template slot-scope="scope">
@@ -123,24 +123,24 @@
       </el-table-column>
       <el-table-column
         label="表名称"
-        align="center"
+        align="left"
         prop="tableName"
         :show-overflow-tooltip="true"
         width="240"
       />
       <el-table-column
         label="表描述"
-        align="center"
+        align="left"
         prop="tableComment"
         :show-overflow-tooltip="true"
-        width="120"
+        width="240"
       />
       <el-table-column
         label="实体"
-        align="center"
+        align="left"
         prop="className"
         :show-overflow-tooltip="true"
-        width="120"
+        width="160"
       />
       <el-table-column
         label="创建时间"

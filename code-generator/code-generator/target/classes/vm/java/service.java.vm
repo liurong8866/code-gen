@@ -1,7 +1,11 @@
 package ${packageName}.service;
 
-import ${packageName}.entity.dos.${ClassName};
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+
+import ${packageName}.entity.dos.${ClassName};
+import ${packageName}.entity.dto.${ClassName}SearchParams;
+
 import java.util.List;
 
 /**
@@ -13,7 +17,11 @@ import java.util.List;
 public interface ${ClassName}Service extends IService<${ClassName}> {
 
     /**
-     * 查询列表
-     */
-    List<${ClassName}> queryList(${ClassName} ${className});
+         * 根据条件分页获取${functionName}
+         *
+         * @param param 条件参数
+         * @return 品牌列表
+         */
+    IPage<${ClassName}> get${ClassName}ByPage(${ClassName}SearchParams param);
+
 }

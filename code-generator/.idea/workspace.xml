@@ -1,28 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="code-generator:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2b6358a-e69a-4bba-9e52-40fa4219b581" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/controller-buyer.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/controller-store.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/domainsearch.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-generator-ui/src/views/code/importTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../code-generator-ui/src/views/code/importTable.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-generator-ui/src/views/code/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../code-generator-ui/src/views/code/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-common/src/main/java/com/code/common/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/code-common/src/main/java/com/code/common/utils/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-common/target/classes/com/code/common/utils/StringUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/code-common/target/classes/com/code/common/utils/StringUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/util/VelocityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/code/generator/util/VelocityUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/generator.yml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/generator.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/controller.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-generator-ui/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../code-generator-ui/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/domain.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/domain.java.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/service.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/service.java.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/serviceImpl.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/serviceImpl.java.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/util/VelocityUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/com/code/generator/util/VelocityUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/domainsearch.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/vm/java/domainsearch.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-generator/target/classes/generator.yml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/generator.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/mapper/GenTableColumnMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/mapper/GenTableColumnMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/mapper/GenTableMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/mapper/GenTableMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/mybatis/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/controller-buyer.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/controller-buyer.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/controller-store.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/controller-store.java.vm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/controller.java.vm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/domain.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/domain.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/domainsearch.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/domainsearch.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/mapper.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/mapper.java.vm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/service.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/service.java.vm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/serviceImpl.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/serviceImpl.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/java/sub-domain.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/java/sub-domain.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/js/api-buyer.js.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/js/api-buyer.js.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/js/api-manager.js.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/js/api-manager.js.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/js/api.js.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/js/api.js.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/sql/sql.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/sql/sql.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/vue/index-tree.vue.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/vue/index-tree.vue.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/vue/index.vue.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/vue/index.vue.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/vm/xml/mapper.xml.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/vm/xml/mapper.xml.vm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +62,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectId" id="23UGmdx85N72Cc8M2jEdcrAKUyl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -63,7 +81,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/code-generator/src/main/resources/vm/java" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.6770115" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -114,7 +132,12 @@
       <workItem from="1641862661778" duration="180000" />
       <workItem from="1641862896441" duration="8811000" />
       <workItem from="1641878203226" duration="594000" />
-      <workItem from="1641892920890" duration="25252000" />
+      <workItem from="1641892920890" duration="26429000" />
+      <workItem from="1642034945358" duration="213000" />
+      <workItem from="1642123226003" duration="5299000" />
+      <workItem from="1642422073275" duration="612000" />
+      <workItem from="1642576473412" duration="1504000" />
+      <workItem from="1644291646823" duration="3466000" />
     </task>
     <servers />
   </component>

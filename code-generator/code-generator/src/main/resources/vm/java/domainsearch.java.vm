@@ -17,7 +17,7 @@ import ${import};
  * @date ${datetime}
  */
 @Data
-@ApiModel(value = "${functionName}查询参数(${ClassName}SearchParams)")
+@ApiModel(value = "${ClassName}SearchParams查询参数(${functionName})")
 public class ${ClassName}SearchParams extends PageVO {
     private static final long serialVersionUID = 1L;
 

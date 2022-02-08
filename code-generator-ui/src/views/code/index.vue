@@ -112,7 +112,7 @@
       <el-table-column
         type="selection"
         align="center"
-        width="30"
+        width="50"
       ></el-table-column>
       <el-table-column label="序号" type="index" width="50" align="center">
         <template slot-scope="scope">

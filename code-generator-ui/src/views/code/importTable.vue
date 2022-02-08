@@ -3,8 +3,8 @@
   <el-dialog
     title="导入表"
     :visible.sync="visible"
-    width="800px"
-    top="5vh"
+    width="940px"
+    top="2vh"
     append-to-body
   >
     <el-form :model="queryParams" ref="queryForm" :inline="true">
@@ -45,21 +45,31 @@
         ref="table"
         :data="dbTableList"
         @selection-change="handleSelectionChange"
-        height="260px"
+        height="400px"
       >
         <el-table-column type="selection" width="55"></el-table-column>
         <el-table-column
           prop="tableName"
           label="表名称"
           :show-overflow-tooltip="true"
+          width="260px"
         ></el-table-column>
         <el-table-column
           prop="tableComment"
           label="表描述"
           :show-overflow-tooltip="true"
+          width="260px"
         ></el-table-column>
-        <el-table-column prop="createTime" label="创建时间"></el-table-column>
-        <el-table-column prop="updateTime" label="更新时间"></el-table-column>
+        <el-table-column
+          prop="createTime"
+          label="创建时间"
+          width="160px"
+        ></el-table-column>
+        <el-table-column
+          prop="updateTime"
+          label="更新时间"
+          width="160px"
+        ></el-table-column>
       </el-table>
       <pagination
         v-show="total > 0"
